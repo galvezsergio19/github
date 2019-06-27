@@ -38,6 +38,12 @@ python main.py \
 --resources='issues,commits,pull_requests'
 ```
 
+Note: Github API has a limit of 60 request per hour for unauthenticated users.
+To have a higher limit, use github access token and place in **GITHUB_TOKEN** of `config.py`.
+
+Source:
+https://developer.github.com/v3/#rate-limiting
+
 ### 4. Running Tests
 ```
 python -m unittest tests/test_github.py

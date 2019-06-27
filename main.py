@@ -13,6 +13,7 @@ import json
 import argparse
 
 from github import GitHub
+from config import SUPPORTED_RESOURCES
 
 logging.basicConfig(level=logging.INFO)
 
@@ -29,7 +30,11 @@ def parse_command_line_args(argv):
     parser.add_argument('--repositories', dest='repositories', required=True,
                         help='A list of strings representing repository names.')
     parser.add_argument('--resources', dest='resources', required=True,
-                        help='A list of desired resource names.')
+                        help='A list of desired resource names. \n' 
+                             'Here is a list of supported resources:  \n'
+                             '{supported_resources}'.format(
+                                supported_resources=SUPPORTED_RESOURCES
+                             ))
 
     return parser.parse_known_args(argv)
 
