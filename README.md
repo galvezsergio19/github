@@ -42,7 +42,9 @@ Note: Github API has a limit of 60 request per hour for unauthenticated users.
 To have a higher limit, use github access token and place in **GITHUB_TOKEN** of `config.py`.
 
 Source:
+
 https://developer.github.com/v3/#rate-limiting
+https://docs.cachethq.io/docs/github-oauth-token
 
 ### 4. Running Tests
 ```
